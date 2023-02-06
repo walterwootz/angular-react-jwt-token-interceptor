@@ -1,9 +1,13 @@
 # Front-end JWT Token Interceptor for Angular & React
-The purpose of JWT interceptor is to add a Bearer JWT token to all http calls throughout the application automatically, if a token exists in the session storage. These examples covers 2 use cases:
+The purpose of JWT interceptor is to add a Bearer JWT token to all http calls throughout the application automatically, if a token exists in the client storage. These examples covers 2 use cases:
 - Angular + [@angular/common/http](https://angular.io/api/common/http)
 - React + [axios](https://www.npmjs.com/package/axios)
 
 In the Angular use case you can find also a reponse handler that redirect to login page if token has expired (401 http status code).
+
+Notice:
+- The following code may need a refactoring, based on you Angular or React version.
+- The following code uses sessionStorage as client-side mode to store JWT token, but you can change it with your own.
 
 ## Angular
 Just create a `token.interceptor.ts` as shown below.
